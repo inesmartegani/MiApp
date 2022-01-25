@@ -8,6 +8,8 @@ import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { FormProfesionalComponent } from './componentes/form-profesional/form-profesional.component';
 import { FormAcademicaComponent } from './componentes/form-academica/form-academica.component';
 import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
+import { PorfolioService } from './servicios/porfolio.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PorfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
